@@ -260,11 +260,13 @@ h2.sec-h2 em { font-style: italic; }
 }
 /* Card sizing */
 .card { position: relative; overflow: hidden; cursor: none; }
-.card:nth-child(1) { grid-column: span 2; aspect-ratio: 16/7; }
-.card:nth-child(2), .card:nth-child(3) { aspect-ratio: 1; }
-.card:nth-child(4) { grid-column: span 2; aspect-ratio: 16/5; }
-.card:nth-child(5), .card:nth-child(6) { aspect-ratio: 4/3; }
-
+.card:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
+.card:nth-child(2), .card:nth-child(3) { aspect-ratio: 4/3; }
+.card:nth-child(4) { grid-column: span 2; aspect-ratio: 16/9; }
+.card:nth-child(5) { grid-column: span 2; aspect-ratio: 16/9; } 
+.card:nth-child(6) { aspect-ratio: 3/4; }
+.card:nth-child(7), .card:nth-child(7) { aspect-ratio: 3/4; }
+.card:nth-child(9), .card:nth-child(10) { aspect-ratio: 4/3; }
 .card-fill {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
@@ -280,7 +282,10 @@ h2.sec-h2 em { font-style: italic; }
 .f4 { background: #b8bcc0; }
 .f5 { background: #bfbab0; }
 .f6 { background: #bbb8c2; }
-
+.f7 { background: #c9c4b4; }
+.f8 { background: #b5bdb5; }
+.f9 { background: #c0b5b8; }
+.f10 { background: #b8bcc0; }
 .card-num {
   font-family: var(--serif); font-style: italic;
   font-size: clamp(60px, 10vw, 160px);
@@ -609,7 +614,7 @@ footer {
 <section id="work" style="padding-top: 28px; padding-bottom: 0; max-width:none;">
   <div class="grid">
     <div class="card r">
-      <div class="card-fill f1"><span class="card-num">01</span></div>
+      <div class="card-fill f1"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780370059/LA-UGG-Marquee-1_1440x700__2x_tovkez.png" alt="Deckers+Ugg" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Deckers/Ugg — Brand Identity</h3>
@@ -618,7 +623,7 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.06s">
-      <div class="card-fill f2"><span class="card-num">02</span></div>
+      <div class="card-fill f2"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780370092/SS18_USFB_Catalog_FREAK_180118_VJ_Page_01_vjmd8v.jpg" alt="Adidas+Freak" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Adidas — Toolkit: Freak Campaign</h3>
@@ -627,7 +632,7 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.12s">
-      <div class="card-fill f3"><span class="card-num">03</span></div>
+      <div class="card-fill f3"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780370147/IMG_4832_pk2tlm.jpg" alt="Adidas Retail" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Adidas — Retail Display</h3>
@@ -636,7 +641,7 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.04s">
-      <div class="card-fill f4"><span class="card-num">04</span></div>
+      <div class="card-fill f4"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780370190/Screen_Shot_2018-02-23_at_9.34.03_PM_rksnbo.png" alt="AdidasxWanderlust" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Adidas — Toolkit: Addias x Wanderlust</h3>
@@ -645,7 +650,7 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.08s">
-      <div class="card-fill f5"><video src="images/your-video.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-fill f5"><video src="https://res.cloudinary.com/drxttrteb/video/upload/v1780369812/CAMILLE_SHORT_HP_tpiffy.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Editorial Videography</h3>
@@ -654,7 +659,7 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.14s">
-      <div class="card-fill f6"><img src="images/project-1.jpg" alt="Camille" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-fill f6"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780369871/CAMILLE_i-2_ffuwgl.jpg" alt="Camille" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Portrait</h3>
@@ -663,7 +668,34 @@ footer {
       </div>
     </div>
     <div class="card r" style="transition-delay:.14s">
-      <div class="card-fill f7"><img src="images/project-1.jpg" alt="Studio Verdant" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-fill f7"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780369841/HELENA-3_iagf4q.jpg" alt="Helena" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-overlay">
+        <div class="card-meta">
+          <h3>Portrait</h3>
+          <p>Photography · Fine Art</p>
+          </div>
+      </div>
+    </div>
+    <div class="card r" style="transition-delay:.14s">
+      <div class="card-fill f8"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780369923/JX4A1398_fyp1jb.jpg" alt="Chesley" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-overlay">
+        <div class="card-meta">
+          <h3>Portrait</h3>
+          <p>Photography · Fine Art</p>
+          </div>
+      </div>
+    </div>
+    <div class="card r" style="transition-delay:.14s">
+      <div class="card-fill f9"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780369822/JX4A8941_afj8fi.jpg" alt="English Pastoral" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="card-overlay">
+        <div class="card-meta">
+          <h3>Landscape</h3>
+          <p>Photography · Fine Art</p>
+          </div>
+      </div>
+    </div>
+    <div class="card r" style="transition-delay:.14s">
+      <div class="card-fill f10"><img src="https://res.cloudinary.com/drxttrteb/image/upload/v1780369822/JX4A0709_oz2vhp.jpg" alt="Chateau" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="card-overlay">
         <div class="card-meta">
           <h3>Portrait</h3>
@@ -680,7 +712,7 @@ footer {
     </div>
     <div class="about-text">
       <div class="sec-label r">About</div>
-      <h2 class="r" style="transition-delay:.06s">Making things<br>look <em>inevitable.</em></h2>
+      <h2 class="r" style="transition-delay:.06s">Making things<br>feel <em>riveting.</em></h2>
       <p class="r" style="transition-delay:.1s">
         I'm a multidisciplinary creative working at the intersection of graphic design, photography, and brand storytelling. With over a decade of experience, I partner with brands and agencies who care deeply about craft and intention.
       </p>
@@ -694,7 +726,7 @@ footer {
         <span class="tag">Content Creator</span>
       </div>
       <div class="about-stats r" style="transition-delay:.22s">
-        <div><div class="stat-n">15</div><div class="stat-l">Years experience</div></div>
+        <div><div class="stat-n">10+</div><div class="stat-l">Years experience</div></div>
         <div><div class="stat-n">80+</div><div class="stat-l">Projects</div></div>
         <div><div class="stat-n">30+</div><div class="stat-l">Clients</div></div>
       </div>
