@@ -978,6 +978,18 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
+  const ham = document.getElementById('hamburger');
+const mobMenu = document.getElementById('mobMenu');
+const mobClose = document.getElementById('mobClose');
+ham.addEventListener('click', () => mobMenu.classList.add('open'));
+mobClose.addEventListener('click', () => mobMenu.classList.remove('open'));
+document.querySelectorAll('.mob-link').forEach(a => {
+  a.addEventListener('click', () => {
+    mobMenu.classList.remove('open');
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { setTimeout(() => t.scrollIntoView({ behavior: 'smooth' }), 10); }
+  });
+});
 
 /* ─── Smooth anchor ─── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1071,18 +1083,7 @@ document.querySelectorAll('.proc-item').forEach((item, i) => {
     delay: i * 0.08
   });
 });
-const ham = document.getElementById('hamburger');
-const mobMenu = document.getElementById('mobMenu');
-const mobClose = document.getElementById('mobClose');
-ham.addEventListener('click', () => mobMenu.classList.add('open'));
-mobClose.addEventListener('click', () => mobMenu.classList.remove('open'));
-document.querySelectorAll('.mob-link').forEach(a => {
-  a.addEventListener('click', () => {
-    mobMenu.classList.remove('open');
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { setTimeout(() => t.scrollIntoView({ behavior: 'smooth' }), 10); }
-  });
-});
+
 </script>
 </body>
 </html>
