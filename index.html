@@ -55,10 +55,17 @@ body {
 }
 .mob-menu a:hover { opacity: .5; font-style: italic; }
 .mob-menu-close {
-  position: absolute; top: 20px; right: 24px;
-  font-size: 28px; background: none; border: none;
-  cursor: pointer; color: var(--black); line-height: 1;
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--black);
+  line-height: 1;
   font-family: var(--sans);
+  z-index: 101;
 }
 .hamburger {
   display: none;
@@ -81,6 +88,10 @@ body {
   .nav-links { display: none; }
   .nav-end { display: none; }
   .hamburger { display: flex; }
+  .mob-menu.open ~ .hamburger,
+body:has(.mob-menu.open) .hamburger {
+  display: none;
+}
   .hero { padding: 48px 20px 40px; min-height: auto; }
   .hero-roles { display: none; }
   .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 8px; line-height: .95; }
