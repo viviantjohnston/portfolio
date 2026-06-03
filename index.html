@@ -92,7 +92,7 @@ body {
 body:has(.mob-menu.open) .hamburger {
   display: none;
 }
-  .hero { padding: 48px 20px 40px; min-height: auto; }
+  .hero { padding: 88px 20px 0px; min-height: auto; }
   .hero-roles { display: none; }
   .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 8px; line-height: .95; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 16px; }
@@ -106,8 +106,8 @@ body:has(.mob-menu.open) .hamburger {
   .section { padding: 0px 0px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
   .svc-desc, .svc-arr { display: none; }
-  /*.proc-grid { grid-template-columns: 1fr; }
-  .process-inner { padding: 60px 20px; }*/ 
+  .proc-grid { grid-template-columns: 1fr; }
+  .process-inner { padding: 60px 20px; }
   .client-row { padding: 16px 0; }
   .client-name { font-size: 18px; }
   .client-hover-img { display: none; }
@@ -328,13 +328,13 @@ h2.sec-h2 em { font-style: italic; }
   padding: 80px 40px 0;
   display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;
 }
-/* .view-link {
+/*.view-link {
   font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
   border-bottom: 1px solid var(--black); padding-bottom: 2px;
   display: flex; align-items: center; gap: 8px;
   transition: gap .25s; flex-shrink: 0;
 }
-.view-link:hover { gap: 14px; } */
+.view-link:hover { gap: 14px; }*/
 
 .grid {
   display: grid;
@@ -484,7 +484,7 @@ h2.sec-h2 em { font-style: italic; }
 /* ══════════════════════════════════
    DARK PROCESS SECTION
 ══════════════════════════════════ */
-/* .process-wrap { background: var(--black); }
+/*.process-wrap { background: var(--black); }
 .process-inner { max-width: 1280px; margin: 0 auto; padding: 120px 40px; }
 .process-inner .sec-label { color: rgba(255,255,255,.3); }
 .process-inner .sec-label::before { background: rgba(255,255,255,.3); }
@@ -502,7 +502,7 @@ h2.sec-h2 em { font-style: italic; }
 .proc-item:hover { background: #111; }
 .proc-step { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.25); margin-bottom: 28px; }
 .proc-item h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 14px; letter-spacing: -.01em; }
-.proc-item p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.45); } */
+.proc-item p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.45); }*/
 
 /* ══════════════════════════════════
    CLIENT LIST
@@ -705,10 +705,10 @@ footer {
       Projects that<br><em>speak for themselves.</em>
     </h2>
   </div>
-  <!-- <a href="#" class="view-link r" style="transition-delay:.1s">
+  <a href="#" class="view-link r" style="transition-delay:.1s">
     View all work →
-  </a> 
-   </div> -->
+  </a>
+</div>
 
 <section id="work" style="padding-top: 28px; padding-bottom: 0; max-width:none;">
   <div class="grid">
@@ -811,8 +811,7 @@ footer {
   </div>
       </div>
     </div>
-    </section>
-     
+</section>
 
 <!-- ════════════ ABOUT ════════════ -->
 <div class="about-wrap" id="about">
@@ -835,8 +834,6 @@ footer {
         <span class="tag">Creative Director</span>
         <span class="tag">Photographer</span>
         <span class="tag">Content Creator</span>
-        <span class="tag">Video Production</span>
-        <span class="tag">Marketing Strategist</span>
       </div>
       <div class="about-stats r" style="transition-delay:.22s">
         <div><div class="stat-n">10+</div><div class="stat-l">Years experience</div></div>
@@ -880,7 +877,7 @@ footer {
 </section>
 
 <!-- ════════════ PROCESS (dark) ════════════ -->
-<!-- <div class="process-wrap">
+<div class="process-wrap">
   <div class="process-inner">
     <div class="sec-label r">How I Work</div>
     <h2 class="sec-h2 r" style="transition-delay:.05s">A process built<br><em>on clarity.</em></h2>
@@ -902,7 +899,7 @@ footer {
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- ════════════ CLIENTS ════════════ -->
 <section id="clients" class="section">
@@ -915,17 +912,17 @@ footer {
     </div>
     <div class="client-row r" style="transition-delay:.04s">
       <span class="client-name">Adidas</span>
-      <div class="client-r"><span class="client-type">Toolkit Design + Retail Display</span></div>
+      <div class="client-r"><span class="client-type">Toolkit Design</span></div>
     </div>
-    <!-- <div class="client-row r" style="transition-delay:.08s">
+    <div class="client-row r" style="transition-delay:.08s">
       <span class="client-name">Adidas</span>
       <div class="client-r"><span class="client-type">Retail Display</span></div>
     </div>
     <div class="client-row r" style="transition-delay:.12s">
       <span class="client-name">Adidas x Wanderlust</span>
       <div class="client-r"><span class="client-type">Toolkit Design</span></div>
-    </div> -->
-    <div class="client-row r" style="transition-delay:.08s">
+    </div>
+    <div class="client-row r" style="transition-delay:.16s">
       <span class="client-name">Acoustic</span>
       <div class="client-r"><span class="client-type">Packaging Design</span></div>
     </div>
