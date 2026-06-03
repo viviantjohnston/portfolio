@@ -83,8 +83,8 @@ body {
   .hamburger { display: flex; }
   .hero { padding: 48px 20px 40px; min-height: auto; }
   .hero-roles { display: none; }
-  .hero-headline { font-size: clamp(32px, 11vw, 72px); margin-top: 24px; line-height: .95; }
-  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 32px; }
+  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 8px; line-height: .95; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 16px; }
   .hero-desc { max-width: 100%; font-size: 15px; }
   .work-header { padding: 48px 20px 0; flex-direction: column; align-items: flex-start; gap: 16px; }
   .grid { grid-template-columns: 1fr; }
@@ -102,6 +102,7 @@ body {
   .client-hover-img { display: none; }
   .contact-inner { padding: 80px 20px; }
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
+  .ticker-wrap { margin-top: -24px; }
 }
 
 /* ══════════════════════════════════
@@ -230,7 +231,7 @@ body {
   line-height: .91;
   letter-spacing: -.04em;
   font-weight: 400;
-  margin-top: 16px;
+  margin-top: 24px;
   will-change: transform;
 }
 .hero-headline .outline {
@@ -972,10 +973,8 @@ document.querySelectorAll('a, button, .card, .svc-row, .client-row, .tag').forEa
       !mobMenu.contains(e.target) &&
       e.target !== ham) {
     mobMenu.classList.remove('open');
-    ham.style.display = 'flex';
   }
-});
-
+}); 
 
 /* ─── Nav scroll state ─── */
 const nav = document.getElementById('nav');
@@ -985,18 +984,11 @@ window.addEventListener('scroll', () => {
   const ham = document.getElementById('hamburger');
 const mobMenu = document.getElementById('mobMenu');
 const mobClose = document.getElementById('mobClose');
-ham.addEventListener('click', () => {
-  mobMenu.classList.add('open');
-  ham.style.display = 'none';
-});
-  mobClose.addEventListener('click', () => {
-  mobMenu.classList.remove('open');
-  ham.style.display = 'flex';
-});
-ddocument.querySelectorAll('.mob-link').forEach(a => {
+ham.addEventListener('click', () => mobMenu.classList.add('open'));
+mobClose.addEventListener('click', () => mobMenu.classList.remove('open'));
+document.querySelectorAll('.mob-link').forEach(a => {
   a.addEventListener('click', () => {
     mobMenu.classList.remove('open');
-    ham.style.display = 'flex';
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { setTimeout(() => t.scrollIntoView({ behavior: 'smooth' }), 10); }
   });
