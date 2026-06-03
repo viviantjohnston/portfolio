@@ -230,7 +230,7 @@ body {
   line-height: .91;
   letter-spacing: -.04em;
   font-weight: 400;
-  margin-top: 48px;
+  margin-top: 16px;
   will-change: transform;
 }
 .hero-headline .outline {
@@ -242,7 +242,7 @@ body {
 
 .hero-bottom {
   display: flex; justify-content: space-between; align-items: flex-end;
-  margin-top: 64px;
+  margin-top: 24px;
 }
 .hero-desc {
   max-width: 360px;
@@ -972,8 +972,10 @@ document.querySelectorAll('a, button, .card, .svc-row, .client-row, .tag').forEa
       !mobMenu.contains(e.target) &&
       e.target !== ham) {
     mobMenu.classList.remove('open');
+    ham.style.display = 'flex';
   }
-}); 
+});
+
 
 /* ─── Nav scroll state ─── */
 const nav = document.getElementById('nav');
@@ -983,11 +985,18 @@ window.addEventListener('scroll', () => {
   const ham = document.getElementById('hamburger');
 const mobMenu = document.getElementById('mobMenu');
 const mobClose = document.getElementById('mobClose');
-ham.addEventListener('click', () => mobMenu.classList.add('open'));
-mobClose.addEventListener('click', () => mobMenu.classList.remove('open'));
-document.querySelectorAll('.mob-link').forEach(a => {
+ham.addEventListener('click', () => {
+  mobMenu.classList.add('open');
+  ham.style.display = 'flex';
+});
+  mobClose.addEventListener('click', () => {
+  mobMenu.classList.remove('open');
+  ham.style.display = 'flex';
+});
+ddocument.querySelectorAll('.mob-link').forEach(a => {
   a.addEventListener('click', () => {
     mobMenu.classList.remove('open');
+    ham.style.display = 'flex';
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { setTimeout(() => t.scrollIntoView({ behavior: 'smooth' }), 10); }
   });
