@@ -83,14 +83,14 @@ body {
   .hamburger { display: flex; }
   .hero { padding: 48px 20px 40px; min-height: auto; }
   .hero-roles { display: none; }
-  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 24px; line-height: .95; }
+  .hero-headline { font-size: clamp(32px, 11vw, 72px); margin-top: 24px; line-height: .95; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 32px; }
   .hero-desc { max-width: 100%; font-size: 15px; }
   .work-header { padding: 48px 20px 0; flex-direction: column; align-items: flex-start; gap: 16px; }
   .grid { grid-template-columns: 1fr; }
   .card:nth-child(1), .card:nth-child(4) { grid-column: span 1; aspect-ratio: 4/3; }
   .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
-  .about-img { aspect-ratio: 3/4; max-height: 260px; width: 100%; border-radius: 3px; }
+  .about-img { aspect-ratio: 3/4; height: 100%; width: 100%; border-radius: 3px; }
   .about-img img { object-position: top center; }
   .section { padding: 60px 20px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
@@ -583,7 +583,7 @@ footer {
   .section, .about-inner, .process-inner, .contact-inner { padding-left: 20px; padding-right: 20px; }
   .hero { padding: 120px 20px 60px; }
   .hero-roles { display: none; }
-  .hero-headline { font-size: clamp(48px, 12vw, 80px); margin-top: 32px; }
+  .hero-headline { font-size: clamp(32px, 12vw, 80px); margin-top: 32px; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 24px; }
   .work-header { padding: 60px 20px 0; flex-direction: column; align-items: flex-start; gap: 20px; }
   .grid { grid-template-columns: 1fr; }
@@ -604,7 +604,7 @@ footer {
 <!-- ════════════ NAV ════════════ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Vivian <em>Johnston</em></a>
+    <a href="#" class="nav-logo">Your <em>Name</em></a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -615,9 +615,20 @@ footer {
     <div class="nav-end">
       <span class="nav-avail"><span class="nav-avail-dot"></span>Available</span>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
-  <div class="mob-menu" id="mobMenu">
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-menu-close" id="mobClose">×</button>
+  <a href="#work" class="mob-link">Work</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#clients" class="mob-link">Clients</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
   <button class="mob-menu-close" id="mobClose">×</button>
   <a href="#work" class="mob-link">Work</a>
   <a href="#about" class="mob-link">About</a>
@@ -1062,7 +1073,7 @@ document.querySelectorAll('.proc-item').forEach((item, i) => {
     delay: i * 0.08
   });
 });
-  const ham = document.getElementById('hamburger');
+const ham = document.getElementById('hamburger');
 const mobMenu = document.getElementById('mobMenu');
 const mobClose = document.getElementById('mobClose');
 ham.addEventListener('click', () => mobMenu.classList.add('open'));
