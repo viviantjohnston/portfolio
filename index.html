@@ -104,13 +104,13 @@ body:has(.mob-menu.open) .hamburger {
   .about-img { aspect-ratio: 2/3; height: 100%; width: 100%; border-radius: 3px; }
   .about-img img { object-position: top center; }
   .section { padding: 0px 0px; }
-  /* .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
+  .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
   .svc-desc, .svc-arr { display: none; }
-  .proc-grid { grid-template-columns: 1fr; }
-  .process-inner { padding: 60px 20px; }
+  /* .proc-grid { grid-template-columns: 1fr; }
+  .process-inner { padding: 60px 20px; }*/
   .client-row { padding: 16px 0; }
   .client-name { font-size: 18px; }
-  .client-hover-img { display: none; } */
+  .client-hover-img { display: none; } 
   .contact-inner { padding: 80px 20px; }
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
   .ticker-wrap { margin-top: -60px; }
@@ -202,10 +202,10 @@ body:has(.mob-menu.open) .hamburger {
 }
 .nav-avail {
   display: flex; align-items: center; gap: 7px;
-  font-size: 11px; letter-spacing: .08em; color: var(--mid);
+  font-size: 12px; letter-spacing: .08em; color: var(--mid);
 }
 .nav-avail-dot {
-  width: 6px; height: 6px; border-radius: 50%;
+  width: 7px; height: 7px; border-radius: 50%;
   background: #2ecc71; flex-shrink: 0;
   animation: pulse 2.4s ease-in-out infinite;
 }
@@ -265,7 +265,7 @@ body:has(.mob-menu.open) .hamburger {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 13px; font-weight: 400; letter-spacing: .06em;
   border: 1px solid var(--black); border-radius: 100px;
-  padding: 13px 26px; transition: background .2s, color .2s;
+  padding: 13px 13px; transition: background .2s, color .2s;
 }
 .hero-cta:hover { background: var(--black); color: var(--white); }
 .hero-cta svg { width: 13px; height: 13px; }
@@ -302,7 +302,7 @@ body:has(.mob-menu.open) .hamburger {
    SHARED SECTION STYLES
 ══════════════════════════════════ */
 .section {
-  padding: 120px 40px;
+  padding: 80px 40px;
   max-width: 1280px; margin: 0 auto;
 }
 .section-full { padding: 120px 0; }
@@ -507,7 +507,7 @@ h2.sec-h2 em { font-style: italic; }
 /* ══════════════════════════════════
    CLIENT LIST
 ══════════════════════════════════ */
-/*.client-list { border-top: 1px solid var(--border); }
+.client-list { border-top: 1px solid var(--border); }
 .client-row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 22px 0; border-bottom: 1px solid var(--border);
@@ -523,7 +523,7 @@ h2.sec-h2 em { font-style: italic; }
 .client-type, .client-yr {
   font-size: 11px; letter-spacing: .1em;
   text-transform: uppercase; color: var(--mid);
-}*/
+}
 
 /* ══════════════════════════════════
    CONTACT / CTA
@@ -843,7 +843,7 @@ footer {
 </div>
 
 <!-- ════════════ SERVICES ════════════ -->
-<!-- <section id="services" class="section" style="padding-top:80px">
+<section id="services" class="section" style="padding-top:80px">
   <div class="sec-label r">What I Do</div>
   <h2 class="sec-h2 r" style="transition-delay:.05s">Full-spectrum<br><em>creative work.</em></h2>
   <div class="svc-list">
@@ -872,7 +872,7 @@ footer {
       <span class="svc-arr">↗</span>
     </div>
   </div>
-</section> -->
+</section> 
 
 <!-- ════════════ PROCESS (dark) ════════════ -->
 <!-- <div class="process-wrap">
@@ -900,7 +900,7 @@ footer {
 </div> -->
 
 <!-- ════════════ CLIENTS ════════════ -->
-<!-- <section id="clients" class="section">
+ <section id="clients" class="section">
   <div class="sec-label r">Collaborators</div>
   <h2 class="sec-h2 r" style="transition-delay:.05s">Trusted by<br><em>good companies.</em></h2>
   <div class="client-list">
@@ -925,7 +925,7 @@ footer {
       <div class="client-r"><span class="client-type">Packaging Design</span></div>
     </div>
   </div>
-</section> -->
+</section> 
 
 <!-- ════════════ CONTACT ════════════ -->
 <div class="contact-wrap" id="contact">
