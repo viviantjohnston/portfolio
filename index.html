@@ -397,7 +397,7 @@ h2.sec-h2 em { font-style: italic; }
   padding: 120px 40px;
 }
 .about-img {
-  aspect-ratio: 3/4; background: var(--border); border-radius: 3px;
+  aspect-ratio: 4/3; background: var(--border); border-radius: 3px;
   overflow: hidden; display: flex; align-items: center; justify-content: center;
   font-family: var(--serif); font-style: italic;
   font-size: clamp(40px, 6vw, 80px); color: rgba(0,0,0,1);
@@ -622,13 +622,6 @@ footer {
 </nav>
 
 <div class="mob-menu" id="mobMenu">
-  <button class="mob-menu-close" id="mobClose">×</button>
-  <a href="#work" class="mob-link">Work</a>
-  <a href="#about" class="mob-link">About</a>
-  <a href="#services" class="mob-link">Services</a>
-  <a href="#clients" class="mob-link">Clients</a>
-  <a href="#contact" class="mob-link">Contact</a>
-</div>
   <button class="mob-menu-close" id="mobClose">×</button>
   <a href="#work" class="mob-link">Work</a>
   <a href="#about" class="mob-link">About</a>
@@ -972,6 +965,13 @@ document.querySelectorAll('a, button, .card, .svc-row, .client-row, .tag').forEa
   el.addEventListener('mouseenter', () => cur.classList.add('big'));
   el.addEventListener('mouseleave', () => cur.classList.remove('big'));
 });
+ document.addEventListener('click', (e) => {
+  if (mobMenu.classList.contains('open') &&
+      !mobMenu.contains(e.target) &&
+      e.target !== ham) {
+    mobMenu.classList.remove('open');
+  }
+}); 
 
 /* ─── Nav scroll state ─── */
 const nav = document.getElementById('nav');
