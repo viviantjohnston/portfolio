@@ -106,8 +106,6 @@ body:has(.mob-menu.open) .hamburger {
   .grid { grid-template-columns: 1fr; }
   .card:nth-child(1), .card:nth-child(4) { grid-column: span 1; aspect-ratio: 4/3; }
   .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
-  /* .about-img { aspect-ratio: 2/3; height: 100%; width: 100%; border-radius: 3px; }
-  .about-img img { object-position: top center; } */
  .about-img {
   width: 100%;
   height: auto;
@@ -130,7 +128,7 @@ body:has(.mob-menu.open) .hamburger {
   .client-row { padding: 16px 0; }
   .client-name { font-size: 18px; }
   .client-hover-img { display: none; }
-  .contact-inner { padding: 40px 20px; }
+  .contact-inner { padding: 20px 20px; }
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
   .ticker-wrap { margin-top: -60px; }
 }
@@ -632,12 +630,12 @@ h2.sec-h2 em { font-style: italic; }
   position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%);
   font-family: var(--serif); font-style: italic; white-space: nowrap;
   font-size: clamp(100px, 22vw, 320px);
-  color: transparent; -webkit-text-stroke: 1px rgba(0,0,0,.06);
+  color: transparent; -webkit-text-stroke: 1px rgba(0,0,0,.08);
   pointer-events: none; user-select: none; line-height: 1; letter-spacing: -.05em;
 }
 .contact-inner {
   max-width: 1280px; margin: 0 auto;
-  padding: 160px 40px; text-align: center; position: relative;
+  padding: 80px 40px; text-align: center; position: relative;
 }
 .contact-inner .sec-label { justify-content: center; }
 .contact-inner h2 {
@@ -671,7 +669,7 @@ footer {
   background: var(--black); padding: 28px 40px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.ft-logo { font-family: var(--serif); font-size: 17px; color: var(--white); text-decoration: none; }
+.ft-logo { font-family: var(--serif); font-size: 28px; color: var(--white); text-decoration: none; }
 .ft-logo em { font-style: italic; }
 .ft-copy { font-size: 11px; letter-spacing: .06em; color: rgba(255,255,255,.3); }
 .ft-links { display: flex; gap: 24px; }
