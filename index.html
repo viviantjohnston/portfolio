@@ -525,15 +525,14 @@ h2.sec-h2 em { font-style: italic; }
 ══════════════════════════════════ */
 .client-list { border-top: 1px solid var(--border); }
 .client-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 22px 0; border-bottom: 1px solid var(--border);
-  transition: padding-left .3s cubic-bezier(.16,1,.3,1); cursor: none;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.client-row:hover { padding-left: 14px; }
-.client-name {
-  font-family: var(--serif);
-  font-size: clamp(20px, 2.8vw, 40px);
-  letter-spacing: -.02em; font-weight: 400;
+.client-row.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .client-r { display: flex; align-items: center; gap: 28px; }
 .client-type, .client-yr {
@@ -1098,24 +1097,23 @@ document.querySelectorAll('.svc-row').forEach((row, i) => {
 });
 
 /* Client rows drift in */
-const clientRows = document.querySelectorAll('.client-row');
-clientRows.forEach((row, i) => {
-  row.style.opacity = '0';
-  row.style.transform = 'translateY(20px)';
-  row.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`;
+const clientObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const row = entry.target;
+      const index = Array.from(document.querySelectorAll('.client-row')).indexOf(row);
+      setTimeout(() => {
+        row.classList.add('visible');
+      }, index * 120);
+      clientObserver.unobserve(row);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        row.style.opacity = '1';
-        row.style.transform = 'translateY(0)';
-        observer.unobserve(row);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  observer.observe(row);
+document.querySelectorAll('.client-row').forEach(row => {
+  clientObserver.observe(row);
 });
+  
 /* Process items scale up */
 document.querySelectorAll('.proc-item').forEach((item, i) => {
   gsap.from(item, {
