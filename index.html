@@ -270,7 +270,7 @@ body:has(.mob-menu.open) .hamburger {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 13px; font-weight: 400; letter-spacing: .06em;
   border: 1px solid var(--black); border-radius: 100px;
-  padding: 13px 26px; transition: background .2s, color .2s;
+  padding: 13px 13px; transition: background .2s, color .2s;
 }
 .hero-cta:hover { background: var(--black); color: var(--white); }
 .hero-cta svg { width: 13px; height: 13px; }
@@ -524,9 +524,11 @@ h2.sec-h2 em { font-style: italic; }
    CLIENT LIST
 ══════════════════════════════════ */
 .client-list { border-top: 1px solid var(--border); }
-.client-row {
+.client-row:not(.visible) {
   opacity: 0;
   transform: translateY(24px);
+}
+.client-row {
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
