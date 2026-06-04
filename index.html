@@ -524,7 +524,9 @@ h2.sec-h2 em { font-style: italic; }
 /* ══════════════════════════════════
    CLIENT LIST
 ══════════════════════════════════ */
-.client-list { border-top: 1px solid var(--border); }
+
+  .client-list { border-top: 1px solid var(--border); }
+#clients { padding-left: 40px; padding-right: 40px; }
 .client-row {
   border-bottom: 1px solid var(--border);
   cursor: none;
@@ -974,14 +976,20 @@ footer {
 </div> -->
 
 <!-- ════════════ CLIENTS ════════════ -->
-<div class="client-list">
+<section id="clients" class="section">
+  <div class="sec-label r">Collaborators</div>
+  <h2 class="sec-h2 r" style="transition-delay:.05s">Trusted by<br><em>good companies.</em></h2>
+  <div class="client-list">
+    ... your client rows ...
+  </div>
+</section>
 
   <div class="client-row">
     <div class="client-row-header">
       <span class="client-name">Deckers/Ugg</span>
       <div class="client-r">
         <span class="client-type">Brand Identity</span>
-        <span class="client-yr">2024</span>
+        <!-- <span class="client-yr">2024</span> -->
         <span class="client-arrow">+</span>
       </div>
     </div>
@@ -995,10 +1003,10 @@ footer {
           <div class="client-detail-label">Industry</div>
           <div class="client-detail-value">Design Studio</div>
         </div>
-        <div>
+        <!-- <div>
           <div class="client-detail-label">Year</div>
           <div class="client-detail-value">2024</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -1022,10 +1030,10 @@ footer {
           <div class="client-detail-label">Industry</div>
           <div class="client-detail-value">Athletic Equipment + Apparel</div>
         </div>
-        <div>
+        <!-- <div>
           <div class="client-detail-label">Year</div>
           <div class="client-detail-value">2024</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -1035,7 +1043,7 @@ footer {
       <span class="client-name">Acoustic</span>
       <div class="client-r">
         <span class="client-type">Packaging</span>
-        <span class="client-yr">2023</span>
+        <!-- <span class="client-yr">2023</span> -->
         <span class="client-arrow">+</span>
       </div>
     </div>
@@ -1049,10 +1057,10 @@ footer {
           <div class="client-detail-label">Industry</div>
           <div class="client-detail-value">Tech</div>
         </div>
-        <div>
+        <!-- <div>
           <div class="client-detail-label">Year</div>
           <div class="client-detail-value">2023</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
