@@ -1098,18 +1098,23 @@ document.querySelectorAll('.svc-row').forEach((row, i) => {
 });
 
 /* Client rows drift in */
-document.querySelectorAll('.client-row').forEach((row, i) => {
-  gsap.from(row, {
-    x: -24, opacity: 0, duration: 0.7,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: row,
-      start: 'top 95%',
-      toggleActions: 'play none none none',
-      once: true
-    },
-    delay: i * 0.05
-  });
+const clientRows = document.querySelectorAll('.client-row');
+clientRows.forEach((row, i) => {
+  row.style.opacity = '0';
+  row.style.transform = 'translateY(20px)';
+  row.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        row.style.opacity = '1';
+        row.style.transform = 'translateY(0)';
+        observer.unobserve(row);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(row);
 });
 /* Process items scale up */
 document.querySelectorAll('.proc-item').forEach((item, i) => {
