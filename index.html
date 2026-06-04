@@ -426,19 +426,17 @@ h2.sec-h2 em { font-style: italic; }
   max-width: 1280px; margin: 0 auto;
   padding: 140px 40px;
 }
-  .about-img {
+ .about-img {
   width: 100%;
-  border-radius: 3px;
-  position: relative;
-  will-change: transform;
-  display: block;
+  height: auto;
+  overflow: visible;
 }
 .about-img img {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
+  display: block;
 }
   overflow: hidden; display: flex; align-items: center; justify-content: center;
   font-family: var(--serif); font-style: italic;
@@ -635,7 +633,7 @@ h2.sec-h2 em { font-style: italic; }
 }
 .contact-inner {
   max-width: 1280px; margin: 0 auto;
-  padding: 80px 40px; text-align: center; position: relative;
+  padding: 120px 40px; text-align: center; position: relative;
 }
 .contact-inner .sec-label { justify-content: center; }
 .contact-inner h2 {
