@@ -93,20 +93,10 @@ body:has(.mob-menu.open) .hamburger {
   display: none;
 }
 
-  .svc-row, .client-row, .svc-list, .client-list {
-  opacity: 1 !important;
-  transform: none !important;
-  visibility: visible !important;
-}
-  #services, #clients {
-  opacity: 1 !important;
-  display: block !important;
-  visibility: visible !important;
-}
- .r {
-  opacity: 1 !important;
-  transform: none !important;
-}
+.r { opacity: 0; transform: translateY(30px); transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
+.r.on { opacity: 1; transform: translateY(0); }
+.svc-row.r, .client-row.r { opacity: 1 !important; transform: none !important; }
+
   .hero { padding: 88px 20px 0px; min-height: auto; }
   .hero-roles { display: none; }
   .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 8px; line-height: .95; }
@@ -495,6 +485,17 @@ h2.sec-h2 em { font-style: italic; }
 .svc-desc { font-size: 13px; line-height: 1.65; color: var(--mid); }
 .svc-arr { font-size: 20px; color: var(--mid); text-align: right; transition: transform .3s, color .3s; }
 .svc-row:hover .svc-arr { transform: translate(3px,-3px); }
+
+  .svc-row, .client-row, .svc-list, .client-list {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+  #services, #clients {
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
 
 /* ══════════════════════════════════
    DARK PROCESS SECTION
