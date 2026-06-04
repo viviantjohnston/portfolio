@@ -111,7 +111,8 @@ body:has(.mob-menu.open) .hamburger {
   .section { padding: 0px 0px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
   .svc-desc, .svc-arr { display: none; }
-  .section { padding: 0px 0px; }
+  #services { padding-bottom: 20px; }
+#clients { padding-top: 20px; }
   .client-list { padding: 0; }
   .client-row { padding: 16px 0; }
   .client-name { font-size: 18px; }
@@ -458,7 +459,9 @@ h2.sec-h2 em { font-style: italic; }
 /* ══════════════════════════════════
    SERVICES — hover fill
 ══════════════════════════════════ */
-.svc-list { border-top: 1px solid var(--border); }
+
+  #services { padding-bottom: 40px; }
+  .svc-list { border-top: 1px solid var(--border); }
 .svc-row {
   position: relative; overflow: hidden;
   display: grid; grid-template-columns: 56px 1fr 1fr 40px;
@@ -525,6 +528,7 @@ h2.sec-h2 em { font-style: italic; }
    CLIENT LIST
 ══════════════════════════════════ */
 
+  #clients { padding-top: 40px; }
 .client-list {
   border-top: 1px solid var(--border);
   padding: 0px;
