@@ -99,7 +99,7 @@ body:has(.mob-menu.open) .hamburger {
 
   .hero { padding: 88px 20px 0px; min-height: auto; }
   .hero-roles { display: none; }
-  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 4px; line-height: .95; }
+  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 0; line-height: .95; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 16px; }
   .hero-desc { max-width: 100%; font-size: 15px; }
   .work-header { padding: 0px 20px 0; flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -108,8 +108,18 @@ body:has(.mob-menu.open) .hamburger {
   .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
   /* .about-img { aspect-ratio: 2/3; height: 100%; width: 100%; border-radius: 3px; }
   .about-img img { object-position: top center; } */
-  .about-img { aspect-ratio: auto; height: auto; max-height: none; width: 100%; border-radius: 3px; display: block; }
-  .about-img img { object-fit: contain; object-position: top center; width: 100%; height: auto; display: block; }
+ .about-img {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.about-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+}
   .section { padding: 0px 0px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
   .svc-desc, .svc-arr { display: none; }
@@ -418,9 +428,20 @@ h2.sec-h2 em { font-style: italic; }
   max-width: 1280px; margin: 0 auto;
   padding: 140px 40px;
 }
-.about-img {
-  a.about-img { aspect-ratio: auto; height: auto; max-height: none; width: 100%; border-radius: 3px; }
-.about-img img { object-fit: contain; object-position: center; width: 100%; height: auto; }
+  .about-img {
+  width: 100%;
+  border-radius: 3px;
+  position: relative;
+  will-change: transform;
+  display: block;
+}
+.about-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
   overflow: hidden; display: flex; align-items: center; justify-content: center;
   font-family: var(--serif); font-style: italic;
   font-size: clamp(40px, 6vw, 80px); color: rgba(0,0,0,1);
@@ -1082,7 +1103,7 @@ footer {
 
 <!-- ════════════ FOOTER ════════════ -->
 <footer>
-  <a href="#"="ft-logo">Vivian <em>Johnston</em></a>
+  <a href="#" class="ft-logo">Vivian <em>Johnston</em></a>
   <span class="ft-copy">© 2026 All rights reserved.</span>
   <ul class="ft-links">
     <li><a href="#work">Work</a></li>
