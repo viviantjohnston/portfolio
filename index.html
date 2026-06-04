@@ -528,15 +528,22 @@ h2.sec-h2 em { font-style: italic; }
    CLIENT LIST
 ══════════════════════════════════ */
 
- .client-list {
-  padding-left: -40px;
-  padding-right: -40px;
+.client-list {
+  border-top: 1px solid var(--border);
 }
-
 .client-row {
   border-bottom: 1px solid var(--border);
   cursor: none;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color .3s;
+}
+.client-row.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .client-row-header {
   display: flex; align-items: center; justify-content: space-between;
@@ -589,19 +596,6 @@ h2.sec-h2 em { font-style: italic; }
   font-size: clamp(16px, 1.5vw, 22px);
   letter-spacing: -.01em; font-weight: 400;
 }
-/* Scroll reveal for rows */
-.client-row {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color .3s;
-}
-.client-row.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* ══════════════════════════════════
    CONTACT / CTA
