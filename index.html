@@ -1243,14 +1243,30 @@ revEls.forEach(el => io.observe(el));
 gsap.registerPlugin(ScrollTrigger);
 
 /* Hero headline drifts up gently on scroll */
-gsap.to('#heroHead', {
-  yPercent: -18,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: 'section',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: true
+ScrollTrigger.matchMedia({
+  "(min-width: 881px)": function() {
+    gsap.to('#heroHead', {
+      yPercent: -18,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  },
+  "(max-width: 880px)": function() {
+    gsap.to('#heroHead', {
+      yPercent: -10,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: '+=300',
+        scrub: true
+      }
+    });
   }
 });
 
