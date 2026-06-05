@@ -88,30 +88,21 @@ body {
   .nav-links { display: none; }
   .nav-end { display: none; }
   body:has(.mob-menu.open) .hamburger { display: none; }
-  .hero { padding: 88px 20px 0; min-height: 0; gap: 16px; }
+  .hero { padding: 88px 20px 0; min-height: 0; gap: 0; }
   .hero-roles { display: none; }
   .hero-top { margin-bottom: 0; padding-bottom: 0; }
-  .hero-tag { margin-bottom: -20px; }
-  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: -100px; margin-bottom: 0; line-height: .95; }
-  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: -20px; padding-bottom: 0; margin-bottom: 0; }
+  .hero-tag { margin-bottom: 8px; }
+  .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 0; margin-bottom: 0; line-height: .95; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 12px; padding-bottom: 0; margin-bottom: 0; }
   .hero-desc { max-width: 100%; font-size: 15px; }
-  .hero-cta { margin-bottom: -10px; }
-  .ticker-wrap { margin-top: -120px; }}
+  .hero-cta { margin-bottom: 0; }
+  .ticker-wrap { margin-top: 24px; }
   .work-header { padding: 0 20px 0; flex-direction: column; align-items: flex-start; gap: 16px; }
   .grid { grid-template-columns: 1fr; }
   .card:nth-child(1), .card:nth-child(4) { grid-column: span 1; aspect-ratio: 4/3; }
   .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
-  .about-img {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-  border-radius: 3px;
-  position: relative;}
-  .about-img img {
-  width: 100%;
-  height: auto;
-  object-fit: unset;
-  display: block;}
+  .about-img { width: 100%; height: auto; overflow: visible; border-radius: 3px; position: relative; }
+  .about-img img { width: 100%; height: auto; object-fit: unset; display: block; }
   #aboutImg { display: none; }
   .section { padding: 60px 20px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
@@ -124,7 +115,6 @@ body {
   .client-hover-img { display: none; }
   .contact-inner { padding: 20px 20px; }
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
-  
 }
 
 /* ══════════════════════════════════
