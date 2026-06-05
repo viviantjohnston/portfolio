@@ -91,6 +91,8 @@ body {
   .hero { padding: 88px 20px 0; min-height: auto; }
   .hero-roles { display: none; }
   .hero-headline { font-size: clamp(40px, 11vw, 72px); margin-top: 0; line-height: .95; }
+  .hero-top { margin-bottom: 0; }
+  .hero { gap: 8px; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 16px; }
   .hero-desc { max-width: 100%; font-size: 15px; }
   .hero-cta { margin-bottom: 0; }
@@ -99,19 +101,17 @@ body {
   .grid { grid-template-columns: 1fr; }
   .card:nth-child(1), .card:nth-child(4) { grid-column: span 1; aspect-ratio: 4/3; }
   .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
- .about-img {
+  .about-img {
   width: 100%;
   height: auto;
   overflow: visible;
   border-radius: 3px;
-  position: relative;
-}
-.about-img img {
+  position: relative;}
+  .about-img img {
   width: 100%;
   height: auto;
   object-fit: unset;
-  display: block;
-}
+  display: block;}
   #aboutImg { display: none; }
   .section { padding: 60px 20px; }
   .svc-row { grid-template-columns: 40px 1fr; gap: 16px; }
@@ -746,7 +746,7 @@ footer {
     </div>
 
     <h1 class="hero-headline r" id="heroHead" style="transition-delay:.1s">
-      I'm a creative <em>artist,</em><br> expert at
+      I am a creative <em>artist&mdash;</em><br> expert at
       spinning <span class="outline">tales</span><br>
       &amp; weaving stories.
     </h1>
